@@ -1,50 +1,88 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import styled from "styled-components"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import Layout from "components/layout"
+import SEO from "components/seo"
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+import media from "utils/media"
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
+const Grid = styled.section`
+  display: block;
+
+  ${media.lg`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 4rem;
+  `}
+`
+
+const Article = styled.article`
+  margin-bottom: 4rem;
+`
+const Title = styled.h3`
+  margin-bottom: 0.6rem;
+
+  a {
+    color: ${({ theme }) => theme.colors.black};
+    text-decoration: none;
+    font-weight: 300;
+
+    :hover {
+      color: ${({ theme }) => theme.colors.darkCyan};
+    }
+  }
+`
+const Small = styled.small`
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+`
+const Excerpt = styled.section`
+  margin-top: 1rem;
+
+  p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+  }
+`
+
+const BlogIndex = ({ data, location }) => {
+  const posts = data.allMarkdownRemark.edges
+
+  return (
+    <Layout location={location} title="All Articles">
+      <SEO title="All articles" />
+
+      <Grid>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+
           return (
-            <article key={node.fields.slug}>
+            <Article key={node.fields.slug}>
               <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
+                <Title>
                   <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                     {title}
                   </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
+                </Title>
+                <Small>{node.frontmatter.date}</Small>
               </header>
-              <section>
+              <Excerpt>
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 />
-              </section>
-            </article>
+              </Excerpt>
+            </Article>
           )
         })}
-      </Layout>
-    )
-  }
+      </Grid>
+    </Layout>
+  )
 }
 
 export default BlogIndex

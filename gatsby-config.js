@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Akuoko Daniel Jnr`,
+    author: `Akuoko Daniel Jnr`,
+    description: `This is the blog Akuoko Daniel Jnr. I share my musings on interesting topics such as law, government, entrepreneurship here.`,
+    siteUrl: `https://akuokodaniel.com`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `_akuokojnr`,
     },
   },
   plugins: [
@@ -57,13 +57,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Akuoko Daniel Jnr`,
+        short_name: `akuokojnr`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#124f46`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `src/images/favicon.png`,
       },
     },
     `gatsby-plugin-offline`,

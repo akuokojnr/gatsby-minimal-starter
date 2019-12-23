@@ -1,75 +1,122 @@
 import React from "react"
-import { Link } from "gatsby"
+import { ThemeProvider } from "styled-components"
+import styled from "styled-components"
 
-import { rhythm, scale } from "../utils/typography"
+import theme from "utils/theme"
+import media from "utils/media"
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+import Header from "./header"
+import Subscribe from "./subscribe"
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
-    return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    )
+const Main = styled.main`
+  width: 100%;
+  padding: 2rem;
+
+  span:last-child {
+    font-style: italic;
+    font-family: "Source Sans Pro";
+    font-size: 0.8rem;
   }
+
+  ${media.sm`
+    padding: 2rem 4rem;
+  `}
+
+  ${media.xl`
+    max-width: ${({ theme }) => theme.maxWidth};
+    margin: 5rem auto 0 auto;
+  `}
+`
+const Footer = styled.footer`
+  display: flex;
+  flex-direction: column-reverse;
+  border-top: 1.1px solid ${({ theme }) => theme.colors.gray};
+  padding: 40px 30px;
+  margin: 100px -30px 0 -30px;
+
+  ${media.md`
+    flex-direction: row;
+  `}
+`
+const Top = styled.div`
+  font-style: italic;
+  font-family: "Source Sans Pro";
+  font-size: 0.8rem;
+  color: ${({ theme }) => theme.colors.black};
+
+  p {
+    font-style: normal;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.black};
+  }
+
+  div {
+    span {
+      margin-bottom: 30px !important;
+    }
+  }
+
+  a {
+    font-style: normal;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.black};
+    font-weight: 300;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.darkCyan};
+    }
+  }
+
+  a + a {
+    margin-left: 10px;
+  }
+`
+
+const Layout = ({ children, title, date }) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <div>
+        <Header title={title} date={date} />
+        <Main>
+          {children}
+
+          <Footer>
+            <Top>
+              <div>
+                <p>Keep in touch: </p>
+
+                <span>
+                  <a
+                    href="https://twitter.com/_akuokojnr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Twitter
+                  </a>
+                  <a
+                    href="https://www.instagram.com/akuokojnr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram
+                  </a>
+                </span>
+              </div>
+            </Top>
+
+            <Subscribe />
+          </Footer>
+
+          <span>
+            Copyright ©{new Date().getFullYear()}. All rights reserved. Carpe
+            Diem!
+          </span>
+        </Main>
+      </div>
+    </ThemeProvider>
+  )
 }
 
 export default Layout
