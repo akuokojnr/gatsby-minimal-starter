@@ -11,7 +11,7 @@ import Subscribe from "./subscribe"
 const Main = styled.main`
   border-top: 1px solid ${({ theme }) => theme.colors.gray};
   width: 100%;
-  padding: 3rem 2rem 0 2rem;
+  padding: 3rem 2rem 1rem 2rem;
 
   span:last-child {
     font-style: italic;
