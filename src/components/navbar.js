@@ -8,18 +8,19 @@ const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  padding: 1.3rem 2rem;
-  box-shadow: ${({ theme }) => theme.boxShadow};
+  /*justify-content: center;*/
+  /*padding: 1.3rem 2rem;*/
   background-color: ${({ theme }) => theme.colors.white};
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.gray};
 
   ${media.md`
     flex-direction: row;
+    align-items: center;
   `}
 
   ${media.xl`
@@ -31,13 +32,19 @@ const Nav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 1rem;
-    margin-left: 0;
+    margin-left: 1rem;
+    margin-bottom: 0.7rem
+
 
     ${media.md`
       margin-top: 0;
       margin-left: auto;
+      margin-bottom: 0;
       width: auto;
+
+      li + li {
+        margin: 0 1rem;
+      }
     `}
   }
 
@@ -45,32 +52,49 @@ const Nav = styled.nav`
     list-style-type: none;
 
     .active-page {
+      background: rgba(	18, 79, 70, 0.2); 
+      color: ${({ theme }) => theme.colors.darkCyan}; 
       font-weight: bold;
+      border-radius: 15px;
     }
-  }
 
-  li + li {
-    margin: 0 2rem;
+    ${media.sm`
+      .active-page {
+        background: ${({ theme }) => theme.colors.darkCyan}; 
+        color: ${({ theme }) => theme.colors.white}; 
+        border-radius: 0;
+        font-weight: 300;
+      }
+    `}
   }
 
   a {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     color: ${({ theme }) => theme.colors.black};
     font-weight: 300;
     font-family: "Source Sans Pro";
+    padding: 0.3rem 0.7rem;
+    margin-right: 0.5rem;
 
-    :hover {
-      font-weight: bold;
-    }
+    ${media.sm`
+      font-size: 1.3rem;
+      padding: 1.3rem;
+      margin-right: 0;
+    `}
   }
 `
 const Brand = styled(Link)`
   font-weight: 700;
-  font-size: 1.5rem !important;
+  font-size: 1.3rem !important;
   text-transform: uppercase;
   font-family: "DM Serif Display" !important;
   font-weight: 400 !important;
+  padding: 1.3rem 0 1rem 1.3rem !important;
+
+  ${media.sm`
+    padding: 1.3rem !important;
+  `}
 `
 
 const Navbar = () => {

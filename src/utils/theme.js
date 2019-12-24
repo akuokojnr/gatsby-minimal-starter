@@ -11,5 +11,5 @@ export default {
   },
 
   boxShadow: `0 2px 5px rgba(0,0,0,.2)`,
-  maxWidth: `1240px`,
+  maxWidth: `1300px`,
 }

@@ -10,18 +10,31 @@ import media from "utils/media"
 const Grid = styled.section`
   display: block;
 
+  ${media.sm`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    article:not(:first-child) {
+      border-left: 1px solid ${({ theme }) => theme.colors.gray};
+    }
+  `}
+
   ${media.lg`
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0 4rem;
+    grid-template-columns: repeat(3, 1fr);
   `}
 `
 
 const Article = styled.article`
-  margin-bottom: 4rem;
+  padding: 2rem 0 2rem 0;
+
+  ${media.sm`
+    padding: 2rem 1rem 2rem 2rem;
+  `}
 `
 const Title = styled.h3`
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.9rem;
+  font-family: "Playfair Display";
 
   a {
     color: ${({ theme }) => theme.colors.black};
@@ -30,6 +43,7 @@ const Title = styled.h3`
 
     :hover {
       color: ${({ theme }) => theme.colors.darkCyan};
+      text-decoration: underline;
     }
   }
 `

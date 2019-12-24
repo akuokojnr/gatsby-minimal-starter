@@ -9,9 +9,15 @@ import media from "utils/media"
 const Grid = styled.section`
   display: block;
 
+  ${media.sm`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 2rem;
+  `}
+
   ${media.lg`
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 0 4rem;
   `}
 `

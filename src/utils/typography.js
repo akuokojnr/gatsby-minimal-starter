@@ -16,6 +16,10 @@ const options = {
       styles: ["400", "400i", "600", "700", "700i"],
     },
     {
+      name: "Playfair Display",
+      styles: ["400", "400i", "600", "700", "700i"],
+    },
+    {
       name: "Source Sans Pro",
       styles: ["400", "400i", "500", "600", "700", "700i"],
     },

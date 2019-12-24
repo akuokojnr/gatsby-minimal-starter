@@ -6,10 +6,6 @@ import media from "utils/media"
 import Navbar from "./navbar"
 
 const Wrap = styled.div`
-  background-color: ${({ theme }) => theme.colors.gray};
-  background-image: url("/grain.svg");
-  background-size: 40px;
-  background-repeat: repeat;
 `
 
 const Section = styled.section`
