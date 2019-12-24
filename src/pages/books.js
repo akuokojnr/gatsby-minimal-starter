@@ -29,6 +29,7 @@ const Year = styled.div`
   li {
     font-size: 1.1rem;
     margin-bottom: 0.8rem;
+    font-family: "Source Sans Pro";
   }
 `
 const Title = styled.h2`
@@ -87,11 +88,11 @@ const Reading = () => {
           return (
             <Year key={year}>
               <Title>{year}</Title>
-              <ul>
+              <ol>
                 {books.map((i, x) => (
                   <li key={`book-${x}`}>{i}</li>
                 ))}
-              </ul>
+              </ol>
             </Year>
           )
         })}
