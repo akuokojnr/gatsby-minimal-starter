@@ -58,7 +58,7 @@ const Excerpt = styled.section`
   margin-top: 1rem;
 
   p {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     line-height: 1.6;
   }
 `

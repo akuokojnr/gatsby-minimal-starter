@@ -8,8 +8,6 @@ const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /*justify-content: center;*/
-  /*padding: 1.3rem 2rem;*/
   background-color: ${({ theme }) => theme.colors.white};
   position: absolute;
   top: 0;
@@ -33,7 +31,9 @@ const Nav = styled.nav`
     align-items: center;
     justify-content: flex-start;
     margin-left: 1rem;
-    margin-bottom: 0.7rem ${media.md`
+    margin-bottom: 0.7rem; 
+    
+    ${media.md`
       margin-top: 0;
       margin-left: auto;
       margin-bottom: 0;
@@ -67,7 +67,7 @@ const Nav = styled.nav`
 
   a {
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: ${({ theme }) => theme.colors.black};
     font-weight: 300;
     font-family: "Source Sans Pro";
