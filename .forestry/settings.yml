@@ -17,4 +17,4 @@ use_front_matter_path: false
 file_template: ":filename:"
 build:
   instant_preview_command: npm run forestry:preview
-  preview_output_directory: dist
+  preview_output_directory: public
