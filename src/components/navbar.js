@@ -33,10 +33,7 @@ const Nav = styled.nav`
     align-items: center;
     justify-content: flex-start;
     margin-left: 1rem;
-    margin-bottom: 0.7rem
-
-
-    ${media.md`
+    margin-bottom: 0.7rem ${media.md`
       margin-top: 0;
       margin-left: auto;
       margin-bottom: 0;
@@ -45,15 +42,15 @@ const Nav = styled.nav`
       li + li {
         margin: 0 1rem;
       }
-    `}
+    `};
   }
 
   li {
     list-style-type: none;
 
     .active-page {
-      background: rgba(	18, 79, 70, 0.2); 
-      color: ${({ theme }) => theme.colors.darkCyan}; 
+      background: rgba(18, 79, 70, 0.2);
+      color: ${({ theme }) => theme.colors.darkCyan};
       font-weight: bold;
       border-radius: 15px;
     }

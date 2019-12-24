@@ -8,7 +8,7 @@ const options = {
   baseLineHeight: 1.45,
   blockMarginBottom: 0,
   headerFontFamily: ["DM Serif Display", "sans-serif"],
-  bodyFontFamily: ["Merriweather", "sans-serif"],
+  bodyFontFamily: ["Source Sans Pro", "sans-serif"],
   scaleRatio: 2.15,
   googleFonts: [
     {

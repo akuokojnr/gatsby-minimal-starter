@@ -5,19 +5,21 @@ import media from "utils/media"
 
 import Navbar from "./navbar"
 
-const Wrap = styled.div`
-`
+import { ReactComponent as Wreath } from "images/wreath.svg"
+
+const Wrap = styled.div``
 
 const Section = styled.section`
-  min-height: 400px;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: -100px;
 
   ${media.xl`
     max-width: ${({ theme }) => theme.maxWidth};
-    margin: 0 auto;
+    margin: 0 auto -100px auto;
   `}
 
   h3 {
@@ -37,6 +39,13 @@ const Section = styled.section`
     margin-top: 20px;
   }
 `
+const WreathIcon = styled(Wreath)`
+  width: 80px;
+
+  g {
+    fill: #000;
+  }
+`
 
 const Header = ({ title, date }) => {
   return (
@@ -45,6 +54,7 @@ const Header = ({ title, date }) => {
         <Navbar />
         <h3>{title}</h3>
         {date && <p>{date}</p>}
+        <WreathIcon />
       </Section>
     </Wrap>
   )
