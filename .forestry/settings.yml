@@ -16,5 +16,11 @@ front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
-  instant_preview_command: npm run forestry:preview
-  preview_output_directory: public
+  preview_docker_image: node:10
+  install_dependencies_command: npm install
+  instant_preview_command: npm start
+  mount_path: "/srv"
+  working_dir: "/srv/src"
+  preview_output_directory: "src/dist"
+  preview_env:
+  - ENV=staging
