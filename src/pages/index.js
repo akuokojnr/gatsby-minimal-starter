@@ -34,7 +34,7 @@ const Article = styled.article`
 `
 const Title = styled.h3`
   margin-bottom: 0.9rem;
-  font-family: "Playfair Display";
+  font-family: "Inria Serif";
 
   a {
     color: ${({ theme }) => theme.colors.black};
@@ -43,7 +43,7 @@ const Title = styled.h3`
 
     :hover {
       color: ${({ theme }) => theme.colors.darkCyan};
-      text-decoration: underline;
+      border-bottom: 2px solid ${({ theme }) => theme.colors.darkCyan};
     }
   }
 `
@@ -58,7 +58,7 @@ const Excerpt = styled.section`
   margin-top: 1rem;
 
   p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.6;
   }
 `

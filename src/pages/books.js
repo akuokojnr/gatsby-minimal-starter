@@ -24,7 +24,7 @@ const Grid = styled.section`
 
 const Year = styled.div`
   margin-bottom: 50px;
-  font-family: "Playfair Display";
+  font-family: "Inria Serif";
 
   li {
     font-size: 1.1rem;

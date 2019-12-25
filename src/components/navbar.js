@@ -83,10 +83,10 @@ const Nav = styled.nav`
 `
 const Brand = styled(Link)`
   font-weight: 700;
-  font-size: 1.3rem !important;
+  font-size: 1.4rem !important;
   text-transform: uppercase;
-  font-family: "DM Serif Display" !important;
-  font-weight: 400 !important;
+  font-family: "Source Sans Pro" !important;
+  font-weight: 700 !important;
   padding: 1.3rem 0 1rem 1.3rem !important;
 
   ${media.sm`
@@ -97,7 +97,7 @@ const Brand = styled(Link)`
 const Navbar = () => {
   return (
     <Nav>
-      <Brand to="/">Akuoko Daniel Jnr</Brand>
+      <Brand to="/">Akuoko Daniel Jnr.</Brand>
 
       <ul>
         <li>

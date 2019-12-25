@@ -16,7 +16,7 @@ const Post = styled.article`
   h6 {
     font-weight: 300;
     margin-bottom: 1rem;
-    font-family: "Playfair Display";
+    font-family: "Inria Serif";
   }
 
   p {

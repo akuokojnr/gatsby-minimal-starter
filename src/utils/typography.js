@@ -7,32 +7,16 @@ const options = {
   baseFontSize: "16px",
   baseLineHeight: 1.45,
   blockMarginBottom: 0,
-  headerFontFamily: ["DM Serif Display", "sans-serif"],
+  headerFontFamily: ["Inria Serif", "sans-serif"],
   bodyFontFamily: ["Source Sans Pro", "sans-serif"],
   scaleRatio: 2.15,
   googleFonts: [
-    {
-      name: "DM Serif Display",
-      styles: ["400", "400i", "600", "700", "700i"],
-    },
-    {
-      name: "Playfair Display",
-      styles: ["400", "400i", "600", "700", "700i"],
-    },
     {
       name: "Source Sans Pro",
       styles: ["400", "400i", "500", "600", "700", "700i"],
     },
     {
-      name: "Merriweather",
-      styles: ["400", "400i", "700", "700i"],
-    },
-    {
-      name: "Marck Script",
-      styles: ["400", "400i", "700", "700i"],
-    },
-    {
-      name: "Parisienne",
+      name: "Inria Serif",
       styles: ["400", "400i", "700", "700i"],
     },
   ],
