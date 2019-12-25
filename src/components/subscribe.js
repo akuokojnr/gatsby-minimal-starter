@@ -59,13 +59,13 @@ const Button = styled.button`
   font-size: 1.15rem;
 `
 
-const Newsletter = ({ type }) => (
+const Newsletter = () => (
   <Wrap>
     <Desc>
       <p>Stay in the loop:</p>
       <p>Subscribe to my weekly newsletter. No spam ever.</p>
     </Desc>
-    <Form name={type} method="POST" data-netlify="true">
+    <Form name="subscribers" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value={type} />
 
       <Input
