@@ -66,7 +66,7 @@ const Newsletter = () => (
       <p>Subscribe to my weekly newsletter. No spam ever.</p>
     </Desc>
     <Form name="subscribers" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value={type} />
+      <input type="hidden" name="form-name" value="subscribers" />
 
       <Input
         type="email"
