@@ -42,6 +42,8 @@ let content = [
   {
     year: "2019",
     books: [
+      "The Polymath by Waqad Ahmed",
+      "Space Barons by Christian Davenport",
       "Ultralearning by Scott Young",
       "Maxims and Aphorisms by Johann Wolfgang von Goethe",
       "Wright Brothers by David McCullough",

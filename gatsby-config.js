@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Akuoko Daniel Jnr`,
     author: `Akuoko Daniel Jnr`,
-    description: `This is the blog Akuoko Daniel Jnr. I share my musings on interesting topics such as law, government, entrepreneurship here.`,
-    siteUrl: `https://akuokodaniel.com`,
+    description: `This is the blog Akuoko Daniel Jnr. This is where I share the musings of my life.`,
+    siteUrl: `https://danielakuoko.com`,
     social: {
       twitter: `_akuokojnr`,
     },
