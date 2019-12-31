@@ -4,6 +4,7 @@ module.exports = {
     author: `Akuoko Daniel Jnr`,
     description: `This is the blog Akuoko Daniel Jnr. This is where I share the musings of my life.`,
     siteUrl: `https://danielakuoko.com`,
+    image: `static/avi.png`,
     social: {
       twitter: `_akuokojnr`,
     },
