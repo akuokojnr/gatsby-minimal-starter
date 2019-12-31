@@ -25,7 +25,8 @@ const Section = styled.section`
   h3 {
     font-size: 2.4rem;
     color: ${({ theme }) => theme.colors.darkCyan};
-    margin-top: 5rem;
+    margin: 5rem 2rem 0 2rem;
+    text-align: center;
 
     ${media.sm`
       font-size: 2.8rem;
@@ -40,7 +41,7 @@ const Section = styled.section`
   }
 `
 const WreathIcon = styled(Wreath)`
-  width: 80px;
+  width: 60px;
 
   g {
     fill: #000;
