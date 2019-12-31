@@ -62,7 +62,7 @@ module.exports = {
         short_name: `akuokojnr`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#124f46`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`,
       },
