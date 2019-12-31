@@ -12,6 +12,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            siteUrl
             image
           }
         }
@@ -47,7 +48,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: site.siteMetadata.image,
+          content: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
         },
         {
           name: `twitter:card`,
@@ -67,7 +68,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `twitter:image`,
-          content: site.siteMetadata.image,
+          content: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
         },
       ].concat(meta)}
     />
