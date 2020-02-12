@@ -1,70 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: `Akuoko Daniel Jnr`,
-    author: `Akuoko Daniel Jnr`,
-    description: `This is the blog Akuoko Daniel Jnr. This is where I share the musings of my life.`,
-    siteUrl: `https://danielakuoko.com`,
-    image: `/avi.png`,
+    title: `Gatsby Minimal Starter`,
+    author: `Daniel Akuoko Jnr`,
+    description: `This is a gatsby minimal starter to quickly scalfold a project`,
+    siteUrl: `localhost:8000`,
     social: {
       twitter: `_akuokojnr`,
     },
   },
   plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-        ],
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
-    `gatsby-plugin-feed`,
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Akuoko Daniel Jnr`,
-        short_name: `akuokojnr`,
+        name: `Gatsby minimal starter`,
+        short_name: `GMS`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`,
+        // icon: `src/images/favicon.png`,
       },
     },
     `gatsby-plugin-offline`,
@@ -75,12 +31,6 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-119602121-3",
       },
     },
   ],
